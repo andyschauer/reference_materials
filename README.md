@@ -1,0 +1,2 @@
+# reference_materials
+This is a file that includes all reference materials housed in IsoLab, Department of Earth and Space Sciences, University of Washington, Seattle, WA, USA. All repositories and other calibration scripts use this file and only this file to define the accepted values for all stable isotopic reference materials.
