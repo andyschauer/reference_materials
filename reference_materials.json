@@ -1,0 +1,767 @@
+{
+    "file_meta_data": {
+        "file": "reference_materials.json",
+        "author": "aschauer@uw.edu",
+        "modification_date": "2024.05.08",
+        "ChangeLog": {
+            "v0.1": {
+                "changes": "created with only water reference materials"
+            },
+            "v0.2": {
+                "changes": "added other classes of materials, renamed water to waters"
+            },
+            "v2023.05.30": {
+                "changes": "created this section to keep track of the reference_materials.json file itself"
+            },
+            "v2023.11.29": {
+                "changes": "updated for d34S and migrated shrekS python scripts to use this file; depricating shrekS_standards.py as of today"
+            },
+            "v2024.01.01": {
+                "changes": "uppercase waters, added USGS waters"
+            },
+            "v2024.01.16": {
+                "changes": "uppercase carbonates, added carbonates that were missing, add accepted values, removed 'acc' from deltas because this entire document refers to accepted values"
+            },
+            "v2024.01.25": {
+                "changes": "added USGS50 and USGS53; made USGS-A1 have a D17O of -999 so that at least the calibration code would go to completion in a few runs when SLAP failed"
+            },
+            "v2024.01.28": {
+                "changes": "added Literature section in meta data, edited the SLAP d17O equation to simply cite Steig or Schoenemann; removed waters 'Barkan', 'Ross5', 'D57', 'TALOS', 'IBW', 'IGW', 'IAW', 'IPW', 'KBW', 'KGW', 'KPW', 'KAW', 'VW1F', 'CPH_22', 'CPH_NEEM', 'CPH_40', 'CPH_DC02', 'DF', 'CIW'"
+            },
+            "v2024.02.12": {
+                "changes": "added a few more CDES gases"
+            },
+            "v2024.03.21": {
+                "changes": "added all of the CN standards from shrekCN_standards.py"
+            },
+            "v2024.04.24": {
+                "changes": "changed all waters to have 'names' instead of 'name'"
+            },
+            "v2024.04.29": {
+                "changes": "update SW2 and SPS2 values"
+            },
+            "v2024.05.01": {
+                "changes": "changed Merck to MERCK for easier compatibility with D47crunch"
+            },
+            "v2024.05.05": {
+                "changes": "added rough estimate of cocoa fractionO"
+            },
+            "v2024.05.08": {
+                "changes": "added UC04"
+            }
+        },
+        "Literature": {
+            "Berman et al. 2013": "https://doi.org/10.1021/ac402366t",
+            "Bernasconi et al. 2018": "https://doi.org/10.1029/2017GC007385",
+            "Bernasconi et al. 2021": "https://doi.org/10.1029/2020GC009588",
+            "Fiebig et al. 2019": "https://doi.org/10.1016/j.chemgeo.2019.05.019",
+            "Gonfiantini et al., 1995": "IAEA-TECDOC-825",
+            "Schoenemann et al. 2013": "https://doi.org/10.1002/rcm.6486",
+            "Steig et al. 2014": "https://doi.org/10.5194/amt-7-2421-2014"
+        }
+    },
+    "carbonates": {
+        "IAEA603": {
+            "names": ["IAEA603"],
+            "material": "calcite",
+            "d13C": 2.46,
+            "d18O_vpdb": -2.37,
+            "notes": "values from IAEA https://analytical-reference-materials.iaea.org/iaea-603"
+        },
+        "NBS19": {
+            "names": ["NBS-19", "NBS_19", "NBS 19", "NBS19"],
+            "material": "limestone",
+            "d13C": 1.95,
+            "d18O_vpdb": -2.2,
+            "d18O_vsmow": 28.65,
+            "notes": "values from CIAAW"
+        },
+        "LSVEC": {
+            "names": ["L-SVEC", "L_SVEC", "L SVEC", "LSVEC"],
+            "material": "Lithium carbonate",
+            "d13C": -46.6,
+            "d18O_vsmow": 3.69,
+            "notes": "values from CIAAW; lithium carbonate does not have an accepted d18O"
+        },
+        "NBS18": {
+            "names": ["NBS-18", "NBS_18", "NBS 18", "NBS18"],
+            "material": "carbonatite",
+            "d13C": -5.01,
+            "d18O_vpdb": -23.01,
+            "d18O_vsmow": 7.20,
+            "notes": "values from CIAAW"
+        },
+        "IAEAC1": {
+            "names": ["IAEA-C1", "IAEA_C1", "IAEA C1", "IAEAC1"],
+            "material": "",
+            "d13C": 2.45,
+            "d13Csd": 0.01,
+            "d18O_vpdb": -2.32,
+            "d18Osd": 0.03,
+            "D47": 0.3018,
+            "D47se": 0.0025,
+            "D48": null,
+            "D48se": null,
+            "notes":"d13C and d18O are from Bernasconi et al. 2018 Table 5, mean of MIT and ETH; D47 from Bernasconi et al. 2021 Figure 4"
+        },
+        "IAEAC2": {
+            "names": ["IAEA-C2", "IAEA_C2", "IAEA C2", "IAEAC2"],
+            "material": "",
+            "d13C": -8.26,
+            "d13Csd": 0.02,
+            "d18O_vpdb": -8.97,
+            "d18Osd": 0.05,
+            "D47": 0.6409,
+            "D47se": 0.0030,
+            "D48": null,
+            "D48se": null,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 5, mean of MIT and ETH; D47 from Bernasconi et al. 2021 Figure 4"
+        },
+        "IAEAC2-PC": {
+            "names": ["IAEAC2-PC-100", "IAEAC2-PC-75", "IAEAC2-PC-50", "IAEAC2-PC-25", "IAEAC2-PC-15", "IAEAC2-PC-10", "IAEAC2-PC-5", "IAEAC2-PC-1",
+                      "PC100-C2", "PC75-C2", "PC50-C2", "PC25-C2", "PC15-C2", "PC10-C2", "PC5-C2", "PC1-C2",
+                      "C2-PC-100","C2-PC-75","C2-PC-50","C2-PC-25","C2-PC-15","C2-PC-10","C2-PC-5","C2-PC-1"],
+            "material": "sand plus IAEA-C2",
+            "notes": "this is a percent carbonate standard made with a mixture of acid-washed, muffled, pulverized sand plus the IAEA-C2 carbonate"
+        },
+        "ETH1": {
+            "names": ["ETH-1", "ETH_1", "ETH 1", "ETH1"],
+            "material": "",
+            "d13C": 2.02,
+            "d13Csd": 0.03,
+            "d18O_vpdb": -2.19,
+            "d18Osd": 0.04,
+            "D47": 0.2052,
+            "D47se": 0.0016,
+            "D48": 0.138,
+            "D48se": 0.033,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
+        },
+        "ETH2": {
+            "names": ["ETH-2", "ETH_2", "ETH 2", "ETH2"],
+            "material": "",
+            "d13C": -10.17,
+            "d13Csd": 0.06,
+            "d18O_vpdb": -18.69,
+            "d18Osd": 0.11,
+            "D47": 0.2085,
+            "D47se": 0.0015,
+            "D48": 0.138,
+            "D48se": 0.028,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
+        },
+        "ETH3": {
+            "names": ["ETH-3", "ETH_3", "ETH 3", "ETH3"],
+            "material": "",
+            "d13C": 1.71,
+            "d13Csd": 0.02,
+            "d18O_vpdb": -1.78,
+            "d18Osd": 0.06,
+            "D47": 0.6132,
+            "D47se": 0.0014,
+            "D48": 0.270,
+            "D48se": 0.033,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
+        },
+        "ETH4": {
+            "names": ["ETH-4", "ETH_4", "ETH 4", "ETH4"],
+            "material": "",
+            "d13C": -10.20,
+            "d13Csd": 0.03,
+            "d18O_vpdb": -18.81,
+            "d18Osd": 0.10,
+            "D47": 0.4511,
+            "D47se": 0.0021,
+            "D48": 0.223,
+            "D48se": 0.030,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Figure 4; D48 from Fiebig et al. 2019"
+        },
+        "Merck": {
+            "names": ["MERCK"],
+            "material": "",
+            "d13C": -41.97,
+            "d13Csd": 0.11,
+            "d18O_vpdb": -15.67,
+            "d18Osd": 0.10,
+            "D47": 0.5135,
+            "D47se": 0.0048,
+            "notes": "d13C and d18O are from Bernasconi et al. 2021 Table_S1_InterCarb_data.csv and exclude the two high d18O samples; D47 from Bernasconi et al. 2021 Figure 4"
+        },
+        "Coral": {
+            "names": ["Coral"],
+            "material": "",
+            "d13C": -2.14,
+            "d18O_vpdb": -4.50,
+            "D47": null,
+            "D48": null,
+            "notes": ""            
+        },
+        "C64": {
+            "names": ["C64"],
+            "material": "",
+            "d13C": -2.05,
+            "d18O_vpdb": -15.54,
+            "D47": null,
+            "D48": null,
+            "notes": ""            
+        },
+        "C64-PC": {
+            "names": ["C64-PC-100", "C64-PC-75", "C64-PC-50", "C64-PC-25", "C64-PC-10", "C64-PC-1"],
+            "material": "sand plus C64",
+            "notes": "this is a percent carbonate standard made with a mixture of acid-washed, muffled, pulverized sand plus the C64 carbonate"
+        },
+        "C1": {
+            "names": ["C1"],
+            "material": "",
+            "d13C": 2.54,
+            "d18O_vpdb": -0.42,
+            "D47": null,
+            "D48": null,
+            "notes": "values as of 120216 from ReferenceMaterial_Carbonates_IsoLab_vs_NIST.txt - run kiel_refmat_nist.m"
+        },
+        "C2": {
+            "names": ["C2"],
+            "material": "",
+            "d13C": -48.99,
+            "d18O_vpdb": -16.47,
+            "D47": null,
+            "D48": null,
+            "notes": "values as of 120216 from ReferenceMaterial_Carbonates_IsoLab_vs_NIST.txt - run kiel_refmat_nist.m"
+        },
+        "CQS2": {
+            "names": ["CQS2"],
+            "material": "",
+            "d13C": -2.15,
+            "d18O_vpdb": -15.34,
+            "D47": null,
+            "D48": null,
+            "notes": "values as of 120216 from ReferenceMaterial_Carbonates_IsoLab_vs_NIST.txt - run kiel_refmat_nist.m"
+        },
+        "Macha": {
+            "names": ["Macha"],
+            "material": "",
+            "d13C": 0.53,
+            "d18O_vpdb": 0.17,
+            "D47": null,
+            "D48": null,
+            "notes": "aragonite from Matthieu Carre, values as of 120216 from ReferenceMaterial_Carbonates_IsoLab_vs_NIST.txt - run kiel_refmat_nist.m"
+        }
+    },
+    "gases": {
+        "SO2": {
+            "working_gas": {
+                "d34S": 3.5
+            }
+        },
+        "CDES":{
+            "FC1000": {
+                "names": ["FC-1000", "FC_1000"]
+            },
+            "FCEN4": {
+                "names": ["FC-EN-4", "FC_EN_4"]
+            },
+            "FF1000": {
+                "names": ["FF-1000", "FF_1000"]
+            },
+            "FFSP4": {
+                "names": ["FF-SP-4", "FF_SP_4"]
+            }
+        }
+
+    },
+    "nitrates": {
+        "USGS32": {"names": ["USGS32"],
+          "material": "potassium nitrate",
+          "d15Nacc": 180,
+          "percentN": 13.85,
+          "notes": ""}
+    },
+    "organics": {
+        "USGS40": {"names": ["USGS40", "USGS-40", "USGS 40", "8573", "US40"],
+            "material": "glutamic acid",
+            "d15N": -4.52,
+            "d13C": -26.39,
+            "fractionN": 0.0952,
+            "fractionC": 0.4082,
+            "notes": ""},
+        "USGS41": {"names": ["USGS41", "USGS-41", "USGS 41", "8574", "US41"],
+            "material": "glutamic acid",
+            "d15N": 47.57,
+            "d13C": 37.63,
+            "fractionN": 0.0952,
+            "fractionC": 0.4082,
+            "notes": ""},
+        "NIST8542": {"names": ["NIST8542"],
+            "material": "sucrose",
+            "d13C": -10.45,
+            "fractionC": 0.3397,
+            "notes": ""},
+        "NIST8540": {"names": ["NIST8540"],
+            "material": "sucrose",
+            "index": [],
+            "d13C": -32.15,
+            "fractionC": 0.3397,
+            "notes": ""},
+        "NIST1547": {"names": ["NIST1547", "uwpl", "uwpl_1", "pl", "peachleaves", "NIST 1547", "peach", "peach leaves", "peach_leaves"],
+            "material": "NIST1547 Peach Leaves",
+            "d13C": -26.1,
+            "fractionC": 0.455,
+            "d15N": 2.0,
+            "fractionN": 0.0294,
+            "d18O": null,
+            "d34S": null,
+            "notes": "https://isolab.ess.washington.edu/resources/standards.php#peach"},
+        "SGR1": {"names": ["SGR_1"],
+            "material": "Green River Shale",
+            "d15N": 17.4,
+            "d13C": null,
+            "fractionN": null,
+            "fractionC": null,
+            "notes": "d15N from Dennen et al 2006 (see 2014 ASITA poster)"},
+        "Cocoa": {
+            "names": ["Cocoa"],
+            "material": "Hershey's Cocoa Powder",
+            "d18O": 23.62,
+            "fractionO": 0.3441,
+            "notes": "d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules; fractionO is from rough calc based on all grain runs using qtycal fit, the std is a 0.0364 "
+        },
+        "DSM": {
+            "names": ["DSM", "drosophila", "bug", "bugs", "fruitfly", "fly"],
+            "material": "Drosophila melanogaster",
+            "d13C": -9.6,
+            "fractionC": 0.519,
+            "d15N": 1.3,
+            "fractionN": 0.088,
+            "d34S": 2.68,
+            "fractionS": 0.006,
+            "notes": "CN values from ReferenceMaterial_CN_IsoLab_vs_NIST.txt and shrek_refmat_nist.m as of 120228, #N and C are from 141114 and 141116"
+        },
+        "GA1": {
+            "names": ["GA1"],
+            "material": "Glutamic acid",
+            "d13C": -28.3,
+            "fractionC": 0.4082,
+            "d15N": -4.6,
+            "fractionN": 0.0952,
+            "d18O": 17.48,
+            "fractionO": 0.4350,
+            "d34S": null,
+            "notes": "d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules, "
+        },
+        "GA2": {
+            "names": ["GA2"],
+            "material": "Glutamic acid",
+            "d13C": -13.7,
+            "fractionC": 0.4082,
+            "d15N": -5.7,
+            "fractionN": 0.0952,
+            "d18O": null,
+            "d34S": null,
+            "notes": ""
+        },
+        "MAL": {
+            "names": ["MAL", "MalachiteLake", "ML", "Malchite Lake"],
+            "material": "Malachite Lake bottom sediment",
+            "d13C": -26.5,
+            "fractionC": 0.390,
+            "d15N": -0.3,
+            "fractionN": 0.020,
+            "d34S": 7.4,
+            "fractionS": 0.002,
+            "notes": "S values as of 160302; CN values from ReferenceMaterial_CN_IsoLab_vs_NIST.txt and shrek_refmat_nist.m as of 120228"
+        },
+        "SA": {
+            "names": ["SA", "salmon"],
+            "material": "Bristol Bay Sockeye Salmon",
+            "fractionC": 0.457,
+            "d13C": -21.3,
+            "d15N": 11.3,
+            "fractionN": 0.118,
+            "d18O": null,
+            "d34S": 18.07,
+            "fractionS": 0.008,
+            "notes": "values from ReferenceMaterial_CN_IsoLab_vs_NIST.txt and shrek_refmat_nist.m as of 120228"
+        },
+        "IsoLab_A2": {"names": ["IsoLab_A2"],
+             "material": "Acetanilide",
+             "d15N": -0.01,
+             "d13C": -30.2,
+             "fractionN": 0.1036,
+             "fractionC": 0.7109,
+             "notes": "original standard when andy arrived, not really used after GA1 and GA2 were employed"}
+
+
+    },
+    "other": {
+        "IAEAS4": {
+            "names": [],
+            "material": "Elemental sulfur",
+            "fractionS": 1,
+            "d34S": 16.90,
+            "notes": ""}
+    },
+    "sulfates": {
+        "IAEASO5": {
+            "names": ["IAEASO5", "IAEA-SO-5", "IAEA-S-5"],
+            "material": "Barium Sulfate",
+            "fractionS": 0.13739,
+            "d34S": 0.49,
+            "notes": "value as of 201030 from ciaaw.org"
+        },
+        "IAEASO6":{
+            "names": ["IAEASO6", "IAEA-SO-6", "IAEA-S-6"],
+            "material": "Barium Sulfate",
+            "fractionS": 0.13739,
+            "d34S": -34.05,
+            "notes": "value as of 201030 from ciaaw.org"
+        },
+        "NBS127": {
+            "names": ["NBS127", "NBS127_BaSO4", "NBS"],
+            "material": "Barium sulfate",
+            "fractionS": 0.13739,
+            "d18O": null,
+            "d34S": 21.12,
+            "notes": ""
+        },
+        "BaSO4": {
+            "names": ["BaSO4", "IsoLab_BaSO4", "Ba100", "IsoLab_Ba100"],
+            "material": "Original Barium Sulfate from Julien Foriel era",
+            "fractionO": 0.2742,
+            "fractionS": 0.13739,
+            "d18O": 10.51,
+            "d34S": 4.70,
+            "R18": null,
+            "notes": "d34S value as of 161117 from reference_material_S.m, d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules, "
+        },
+        "Na2SO4": {
+            "names": ["Na2SO4", "Na2SO4_2"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "Ag2SO4":{
+            "names": ["Ag2SO4"],
+            "material": "Silver sulfate",
+            "fractionS": 0.10284,
+            "d34S": null,
+            "d18O": null,
+            "D17O": null,
+            "notes": ""
+        },
+        "CaSO4": {
+            "names": ["CaSO4"],
+            "material": "Calcium Sulfate",
+            "d34S": null,
+            "fractionS": 0.23553,
+            "notes": ""
+        },
+        "selenite": {
+            "names": ["selenite"],
+            "material": "Calcium Sulfate Dihydrate",
+            "d34S": null,
+            "fractionS": 0.18624,
+            "notes": ""
+        },
+        "IAEAN1": {"names": ["IAEAN1", "IAEA_N_1", "IAEA-N-1"],
+          "material": "ammonium sulfate",
+          "index": [],
+          "d15Nacc": 0.43,
+          "percentN": 21.2,
+          "notes": ""}
+
+    },
+    "sulfides": {
+        "IAEAS1": {
+            "names": ["IAEAS1", "IAEA_S1", "IAEA_S_1", "IAEAS1_Ag2S", "IAEA-S-1"],
+            "material": "Silver Sulfide",
+            "fractionS": 0.12940,
+            "d34S": -0.3,
+            "notes": "exact value that defines the scale"
+        },
+        "IAEAS2": {
+            "names": ["IAEAS2", "IAEA-S-2"],
+            "material": "Silver Sulfide",
+            "fractionS": 0.12940,
+            "d34S": 22.62,
+            "notes": "value as of 201030 from ciaaw.org"
+        },
+        "IAEAS3": {
+            "names": ["IAEAS3", "IAEA_S3", "IAEA_S_3", "IAEAS3_Ag2S", "IAEA-S-3"],
+            "material": "Silver Sulfide",
+            "fractionS": 0.12940,
+            "d34S": -32.49,
+            "notes": "value as of 201030 from ciaaw.org"
+
+        },
+        "Ag2S": {
+            "names": ["Ag2S", "IsoLab_Ag2S", "SLAgS", "UT"],
+            "material": "Silver Sulfide from Craig Cook, SIRFER, UU, c 2008",
+            "fractionS": 0.12940,
+            "d34S": 17.57,
+            "notes": "d34S value as of 161117 from reference_material_S.m"
+        },
+        "ZnS":{
+            "names": ["ZnS", "IsoLab_ZnS"],
+            "material": "Zinc Sulfide from Stanislaw Halas c 2008",
+            "fractionS": 0.32896,
+            "d34S": -32.24,
+            "notes": "values as of 161117 from reference_material_S.m"
+        }
+    },
+    "waters": {
+        "VSMOW": {
+            "names": ["VSMOW"],
+            "material": "",
+            "dD": 0,
+            "d18O": 0,
+            "D17O": 0,
+            "R18": 0.0020052,
+            "R17": 0.0003799,
+            "notes": ""
+        },
+        "VSMOW2": {
+            "names": ["VSMOW2"],
+            "material": "",
+            "dD": 0,
+            "d18O": 0,
+            "D17O": 0,
+            "notes": ""
+        },
+        "GISP": {
+            "names": ["GISP"],
+            "material": "",
+            "dD": -189.73,
+            "d18O": -24.78,
+            "D17O": 25,
+            "notes": "CIAAW values for GISP are dD=-189.73 and d18O=-24.78 (Gonfiantini et al., 1995), 17Oxs from ReferenceWaters.csv on 170104"
+        },
+        "GRESP": {
+            "names": ["GRESP"],
+            "material": "",
+            "dD": -258.0,
+            "d18O": -33.40,
+            "D17O": null,
+            "notes": "values from IAEA doc IAEA/AQ/63 Table 7 page 17; CIAAW seems to refer to GRESP as GISP2, though apparently GISP2 was never completed"
+        },
+        "SLAP": {
+            "names": ["SLAP"],
+            "material": "",
+            "dD": -428,
+            "d18O": -55.5,
+            "D17O": 0,
+            "notes": "d17O defined such that 17Oxs = 0, see either equation (9) in Schoenemann et al. 2013 or equation (9) in Steig et al. 2014"
+        },
+        "SLAP2": {
+            "names": ["SLAP2"],
+            "material": "",
+            "dD": -427.5,
+            "d18O": -55.5,
+            "D17O": 0,
+            "notes": "d17O defined such that 17Oxs = 0, see either equation (9) in Schoenemann et al. 2013 or equation (9) in Steig et al. 2014"
+        },
+        "UC04": {
+            "names": ["UC04"],
+            "material": "University of Chicago 04",
+            "dD": 113.6,
+            "d18O": 38.95,
+            "D17O": null,
+            "notes": "sealed in silver capsules"
+        },
+        "USGS_PR": {
+            "names": ["USGS_PR"],
+            "material": "",
+            "dD": -1.3,
+            "d18O": -1.52,
+            "D17O": null,
+            "notes": "dD and d18O from ampules"
+        },
+        "USGS_A1": {
+            "names": ["USGS_A1"],
+            "material": "",
+            "dD": -395,
+            "d18O": -50.02,
+            "D17O": null,
+            "notes": "dD and d18O from ampules"
+        },
+        "USGS45": {
+            "names": ["USGS45"],
+            "material": "",
+            "dD": -10.3,
+            "d18O": -2.238,
+            "D17O": 12,
+            "notes": "dD and d18O from USGS, 17Oxs is from Berman et al. 2013"
+        },
+        "USGS47": {
+            "names": ["USGS47"],
+            "material": "",
+            "dD": -150.2,
+            "d18O": -19.804,
+            "D17O": 40,
+            "notes": "dD and d18O from USGS, 17Oxs is from Berman et al. 2013"
+        },
+        "USGS50": {
+            "names": ["USGS50"],
+            "material": "",
+            "dD": 32.8,
+            "d18O": 4.95,
+            "D17O": null,
+            "notes": "dD and d18O from USGS"
+        },
+        "USGS53": {
+            "names": ["USGS53"],
+            "material": "",
+            "dD": 40.2,
+            "d18O": 5.47,
+            "D17O": null,
+            "notes": "dD and d18O from USGS"
+        },
+        "RW": {
+            "names": ["RW"],
+            "material": "Rebecca Water, evaporatively enriched water by Rebecca",
+            "dD": -18.52,
+            "d18O": 5.15,
+            "D17O": null,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv"
+        },
+        "KD": {
+            "names": ["KD"],
+            "material": "Kona Deep drinking water",
+            "dD": 0.65,
+            "d18O": 0.00,
+            "D17O": -3,
+            "notes": "Kona Deep drinking water, accepted values from 20150213T132436_ReferenceWaters_ReducedFile.csv, updated 17Oxs on 170104"
+        },
+        "KD2": {
+            "names": ["KD2"],
+            "material": "Kona Deep drinking water, second batch",
+            "dD": null,
+            "d18O": null,
+            "D17O": null,
+            "notes": "Kona Deep drinking water - second batch"
+        },
+        "HW": {
+            "names": ["HW"],
+            "material": "Hawaii Water",
+            "dD": null,
+            "d18O": null,
+            "D17O": null,
+            "notes": "DI water from Oahu, HI, Brian Popp's lab"
+        },
+        "PW": {
+            "names": ["PW"],
+            "material": "Pennsylvania Water",
+            "dD": -42.12,
+            "d18O": -6.88,
+            "D17O": 30,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, 20130331T115723_Water17OReducedFile_ACCEPTED_VALUES.xlsx, d17O = (D17O*10**-6+0.528*math.log(d18O/1000+1))-1)*1000)"
+        },
+        "SW": {
+            "names": ["SW"],
+            "material": "Seattle DI tap water",
+            "dD": -75.63,
+            "d18O": -10.55,
+            "D17O": 33,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, 20130331T115723_Water17OReducedFile_ACCEPTED_VALUES.xlsx, d17O = (D17O*10**-6+0.528*math.log(d18O/1000+1))-1)*1000)"
+        },
+        "SW2": {
+            "names": ["SW2"],
+            "material": "Seattle DI tap water, second batch",
+            "dD": -78.23,
+            "d18O": -10.93,
+            "D17O": 33,
+            "notes": "dD and d18O values from 20240429T193458_ReferenceWaters_ReducedFile.csv and 17Oxs from SW"
+        },
+        "BW": {
+            "names": ["BW"],
+            "material": "Beth Water, Beth mixed Seattle DI water with old ice core samples (probably ITASE) until the d18O was -20 permil",
+            "dD": -156.87,
+            "d18O": -20.01,
+            "D17O": 13,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, D17O from referencewaters.m run on 160816, updated 17Oxs on 170104"
+        },
+        "AW": {
+            "names": ["AW"],
+            "material": "Antarctic Water",
+            "dD": -231.54,
+            "d18O": -29.79,
+            "D17O": null,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv"
+        }, 
+        "WW": {
+            "names": ["WW"],
+            "material": "WAIS Water, West Antarctic Ice Sheet packing snow",
+            "dD": -268.30,
+            "d18O": -33.82,
+            "D17O": 25,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, 20130331T115723_Water17OReducedFile_ACCEPTED_VALUES.xlsx, d17O = (D17O*10**-6+0.528*math.log(d18O/1000+1))-1)*1000), updated 17Oxs on 170104"
+        },
+        "CW": {
+            "names": ["CW"],
+            "material": "Colorado Water is WDC06A from NICL 2010ish",
+            "dD": -265.95,
+            "d18O": -33.64,
+            "D17O": null,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv"
+        },
+        "TDW": {
+            "names": ["TDW"],
+            "material": "Taylor Dome Water",
+            "dD": -309.49,
+            "d18O": -38.76,
+            "D17O": null,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv"
+        },
+        "WGW": {
+            "names": ["WGW"],
+            "material": "WAIS Glacial Water, West Antarctic Ice Sheet core glacial time period",
+            "dD": -318.82,
+            "d18O": -39.77,
+            "D17O": 14,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, 20130331T115723_Water17OReducedFile_ACCEPTED_VALUES.xlsx, d17O = (D17O*10**-6+0.528*math.log(d18O/1000+1))-1)*1000)"
+        },
+        "SVW": {
+            "names": ["SVW"],
+            "material": "Seattle Vostok Water, mixture of Seattle DI water and Vostok water",
+            "dD": -316.59,
+            "d18O": -41.13,
+            "D17O": null,
+            "notes": "dD and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv"
+        },
+        "SPS": {
+            "names": ["SPS"],
+            "material": "South Pole Snow, 1st batch, packing snow from the SPICEcore effort",
+            "dD": -365.01,
+            "d18O": -46.96,
+            "D17O": 15,
+            "notes": "values from 170718_EricMeeting.mat"
+        },
+        "SPS2": {
+            "names": ["SPS2"],
+            "material": "South Pole Snow, 2nd batch, packing snow from the SPICEcore effort",
+            "dD": -364.66,
+            "d18O": -46.88,
+            "D17O": 15,
+            "notes": "values from 20240429T193458_ReferenceWaters_ReducedFile.csv, 17Oxs from SPS"
+        },
+        "SPG": {
+            "names": ["SPG"],
+            "material": "South Pole Glacial, water from SPICEcore last glacial time period",
+            "dD": -435.31,
+            "d18O": -55.39,
+            "D17O": -11,
+            "notes": "values from 170718_EricMeeting.mat"
+        },
+        "VW": {
+            "names": ["VW"],
+            "material": "Vostok Water",
+            "dD": -439.24,
+            "d18O": -56.61,
+            "D17O": 0,
+            "notes": "dD is from 20150114T095434_ReferenceWaters_ReducedFile.csv and d18O from 20130401T082738_ReferenceWaters_ReducedFile_ACCEPTED_VALUES.csv, 20130331T115723_Water17OReducedFile_ACCEPTED_VALUES.xlsx, d17O = (D17O*10**-6+0.528*math.log(d18O/1000+1))-1)*1000), updated 170104"
+        }
+    }    
+}
