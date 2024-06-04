@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2024.05.08",
+        "modification_date": "2024.06.03",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -48,6 +48,9 @@
             },
             "v2024.05.08": {
                 "changes": "added UC04"
+            },
+            "v2024.06.03": {
+                "changes": "added d34S for NIST1547"
             }
         },
         "Literature": {
@@ -309,7 +312,7 @@
             "d15N": 2.0,
             "fractionN": 0.0294,
             "d18O": null,
-            "d34S": null,
+            "d34S": 7.6,
             "notes": "https://isolab.ess.washington.edu/resources/standards.php#peach"},
         "SGR1": {"names": ["SGR_1"],
             "material": "Green River Shale",
