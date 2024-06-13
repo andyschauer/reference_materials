@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2024.06.03",
+        "modification_date": "2024.06.09",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -51,6 +51,9 @@
             },
             "v2024.06.03": {
                 "changes": "added d34S for NIST1547"
+            },
+            "v2024.06.09": {
+                "changes": "added 'SodSul_x' sodium sulfate standards 1 through 8"
             }
         },
         "Literature": {
@@ -436,8 +439,78 @@
             "R18": null,
             "notes": "d34S value as of 161117 from reference_material_S.m, d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules, "
         },
-        "Na2SO4": {
-            "names": ["Na2SO4", "Na2SO4_2"],
+        "SodSul_1": {
+            "names": ["SodSul_1", "Na2SO4_1"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_2": {
+            "names": ["SodSul_2", "Na2SO4", "Na2SO4_2"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_3": {
+            "names": ["SodSul_3", "Na2SO4_3"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_4": {
+            "names": ["SodSul_4", "Na2SO4_4"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_5": {
+            "names": ["SodSul_5", "Na2SO4_5"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_6": {
+            "names": ["SodSul_6", "Na2SO4_6"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_7": {
+            "names": ["SodSul_7", "Na2SO4_7"],
+            "material": "Sodium Sulfate",
+            "fractionO": null,
+            "fractionS": 0.22574,
+            "d18O": null,
+            "d34S": null,
+            "R18": null,
+            "notes": ""
+        },
+        "SodSul_8": {
+            "names": ["SodSul_8", "Na2SO4_8"],
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
