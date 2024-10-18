@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2024.06.09",
+        "modification_date": "2024.10.18",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -54,6 +54,12 @@
             },
             "v2024.06.09": {
                 "changes": "added 'SodSul_x' sodium sulfate standards 1 through 8"
+            },
+            "v2024.08.07": {
+                "changes": "added GU1 to carbonates"
+            },
+            "v2024.10.18": {
+                "changes": "added all sodium sulfates"
             }
         },
         "Literature": {
@@ -61,7 +67,9 @@
             "Bernasconi et al. 2018": "https://doi.org/10.1029/2017GC007385",
             "Bernasconi et al. 2021": "https://doi.org/10.1029/2020GC009588",
             "Fiebig et al. 2019": "https://doi.org/10.1016/j.chemgeo.2019.05.019",
+            "Fiebig et al. 2021": "https://doi.org/10.1016/j.gca.2021.07.012",
             "Gonfiantini et al., 1995": "IAEA-TECDOC-825",
+            "Moon et al., 2024": "https://pubs.acs.org/doi/10.1021/acsestair.3c00023",
             "Schoenemann et al. 2013": "https://doi.org/10.1002/rcm.6486",
             "Steig et al. 2014": "https://doi.org/10.5194/amt-7-2421-2014"
         }
@@ -192,6 +200,19 @@
             "D47": 0.5135,
             "D47se": 0.0048,
             "notes": "d13C and d18O are from Bernasconi et al. 2021 Table_S1_InterCarb_data.csv and exclude the two high d18O samples; D47 from Bernasconi et al. 2021 Figure 4"
+        },
+        "GU1": {
+            "names": ["GU1"],
+            "material": "",
+            "d13C": null,
+            "d13Csd": null,
+            "d18O_vpdb": null,
+            "d18Osd": null,
+            "D47": 0.226,
+            "D47se": 0.004,
+            "D48": -0.419,
+            "D48se": 0.016,
+            "notes": "GU1, first described by Fiebig et al. (2021) , is a synthetic calcite produced on an industrial scale by injection of CO2 into a high-pH Ca (OH)2-saturated solution.; Δ47_CDES 90 and Δ48_CDES 90"
         },
         "Coral": {
             "names": ["Coral"],
@@ -439,6 +460,94 @@
             "R18": null,
             "notes": "d34S value as of 161117 from reference_material_S.m, d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules, "
         },
+        "Sulf-alpha": {
+            "names": ["Sulf-alpha", "Sulf_alpha"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": -2.86,
+            "d18O": -7.16,
+            "D17O": 0.86,
+            "fractionS": 0.22574,
+            "d34S": 9.1,
+            "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
+        },
+        "Sulf-beta": {
+            "names": ["Sulf-beta", "Sulf_beta"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": -1.46,
+            "d18O": -6.78,
+            "D17O": 2.07,
+            "fractionS": 0.22574,
+            "d34S": 9.1,
+            "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
+        },
+        "Sulf-epsilon": {
+            "names": ["Sulf-epsilon", "Sulf_epsilon"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": 3.55,
+            "d18O": -6.71,
+            "D17O": 7.04,
+            "fractionS": 0.22574,
+            "d34S": 9.1,
+            "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
+        },
+        "S-bravo": {
+            "names": ["S-bravo", "S_bravo"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": -2.15,
+            "d18O": -4.83,
+            "D17O": 0.36,
+            "fractionS": 0.22574,
+            "d34S": null,
+            "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
+        },
+        "S-charlie": {
+            "names": ["S-charlie", "S_charlie"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": -1.96,
+            "d18O": -5.48,
+            "D17O": 0.89,
+            "fractionS": 0.22574,
+            "d34S": null,
+            "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
+        },
+        "S-delta": {
+            "names": ["S-delta", "S_delta"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": -1.29,
+            "d18O": -7.39,
+            "D17O": 2.55,
+            "fractionS": 0.22574,
+            "d34S": null,
+            "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
+        },
+        "S-echo": {
+            "names": ["S-echo", "S_echo"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": 0.46,
+            "d18O": -5.44,
+            "D17O": 3.29,
+            "fractionS": 0.22574,
+            "d34S": null,
+            "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
+        },
+        "S-foxtrot": {
+            "names": ["S-foxtrot", "S_foxtrot"],
+            "material": "Sodium sulfate",
+            "fractionO": 0.4506,
+            "d17O": 3.89,
+            "d18O": -5.89,
+            "D17O": 6.95,
+            "fractionS": 0.22574,
+            "d34S": null,
+            "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
+        },
         "SodSul_1": {
             "names": ["SodSul_1", "Na2SO4_1"],
             "material": "Sodium Sulfate",
@@ -547,7 +656,19 @@
           "index": [],
           "d15Nacc": 0.43,
           "percentN": 21.2,
-          "notes": ""}
+          "notes": ""
+        },
+        "[name]": {
+            "names": ["[name]"],
+            "material": "[material]",
+            "fractionO": null,
+            "d17O": null,
+            "d18O": null,
+            "D17O": null,
+            "fractionS": null,
+            "d34S": null,
+            "notes": "[notes]"
+        }
 
     },
     "sulfides": {
