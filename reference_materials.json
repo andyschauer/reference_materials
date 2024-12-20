@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2024.10.18",
+        "modification_date": "2024.12.19",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -60,6 +60,15 @@
             },
             "v2024.10.18": {
                 "changes": "added all sodium sulfates"
+            },
+            "v2024.10.31": {
+                "changes": "replaced dashes (-) with spooky underscores for sodium sulfates"
+            },
+            "v2024.12.06": {
+                "changes": "updated D48 accepted values and added reference Fiebig et al 2024"
+            },
+            "v2024.12.19": {
+                "changes": "added reference gas information for clumped isotope calibration"
             }
         },
         "Literature": {
@@ -68,6 +77,7 @@
             "Bernasconi et al. 2021": "https://doi.org/10.1029/2020GC009588",
             "Fiebig et al. 2019": "https://doi.org/10.1016/j.chemgeo.2019.05.019",
             "Fiebig et al. 2021": "https://doi.org/10.1016/j.gca.2021.07.012",
+            "Fiebig et al. 2024": "https://doi.org/10.1016/j.chemgeo.2024.122382",
             "Gonfiantini et al., 1995": "IAEA-TECDOC-825",
             "Moon et al., 2024": "https://pubs.acs.org/doi/10.1021/acsestair.3c00023",
             "Schoenemann et al. 2013": "https://doi.org/10.1002/rcm.6486",
@@ -147,9 +157,9 @@
             "d18Osd": 0.04,
             "D47": 0.2052,
             "D47se": 0.0016,
-            "D48": 0.138,
-            "D48se": 0.033,
-            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
+            "D48": 0.1277,
+            "D48se": 0.0015,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2024"
         },
         "ETH2": {
             "names": ["ETH-2", "ETH_2", "ETH 2", "ETH2"],
@@ -160,8 +170,8 @@
             "d18Osd": 0.11,
             "D47": 0.2085,
             "D47se": 0.0015,
-            "D48": 0.138,
-            "D48se": 0.028,
+            "D48": 0.1299,
+            "D48se": 0.0016,
             "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
         },
         "ETH3": {
@@ -175,7 +185,7 @@
             "D47se": 0.0014,
             "D48": 0.270,
             "D48se": 0.033,
-            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019"
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Table 1; D48 from Fiebig et al. 2019; read Fiebig et al 2024 to learn about nitrate contamination"
         },
         "ETH4": {
             "names": ["ETH-4", "ETH_4", "ETH 4", "ETH4"],
@@ -186,9 +196,9 @@
             "d18Osd": 0.10,
             "D47": 0.4511,
             "D47se": 0.0021,
-            "D48": 0.223,
-            "D48se": 0.030,
-            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Figure 4; D48 from Fiebig et al. 2019"
+            "D48": 0.2041,
+            "D48se": 0.0071,
+            "notes": "d13C and d18O are from Bernasconi et al. 2018 Table 4 Average column; D47 from Bernasconi et al. 2021 Figure 4; D48 from Fiebig et al. 2024"
         },
         "Merck": {
             "names": ["MERCK"],
@@ -199,6 +209,8 @@
             "d18Osd": 0.10,
             "D47": 0.5135,
             "D47se": 0.0048,
+            "D48": null,
+            "D48se": null,
             "notes": "d13C and d18O are from Bernasconi et al. 2021 Table_S1_InterCarb_data.csv and exclude the two high d18O samples; D47 from Bernasconi et al. 2021 Figure 4"
         },
         "GU1": {
@@ -208,11 +220,11 @@
             "d13Csd": null,
             "d18O_vpdb": null,
             "d18Osd": null,
-            "D47": 0.226,
-            "D47se": 0.004,
-            "D48": -0.419,
-            "D48se": 0.016,
-            "notes": "GU1, first described by Fiebig et al. (2021) , is a synthetic calcite produced on an industrial scale by injection of CO2 into a high-pH Ca (OH)2-saturated solution.; Δ47_CDES 90 and Δ48_CDES 90"
+            "D47": 0.2254,
+            "D47se": 0.0008,
+            "D48": -0.3998,
+            "D48se": 0.0043,
+            "notes": "GU1, first described by Fiebig et al. (2021) , is a synthetic calcite produced on an industrial scale by injection of CO2 into a high-pH Ca (OH)2-saturated solution.; Δ47_CDES 90 and Δ48_CDES 90, D47 and D48 accepted value from Fiebig et al 2024"
         },
         "Coral": {
             "names": ["Coral"],
@@ -282,16 +294,40 @@
         },
         "CDES":{
             "FC1000": {
-                "names": ["FC-1000", "FC_1000"]
+                "names": ["FC-1000", "FC_1000"],
+                "material": "heated fermented corn carbon dioxide",
+                "d13C": null,
+                "d18O_vpdb": null,
+                "D47": null,
+                "D48": null,
+                "notes": ""
             },
             "FCEN4": {
-                "names": ["FC-EN-4", "FC_EN_4"]
+                "names": ["FC-EN-4", "FC_EN_4"],
+                "material": "fermented corn carbon dioxide equilibrated with evaporatively enriched water at 4*C",
+                "d13C": null,
+                "d18O_vpdb": null,
+                "D47": null,
+                "D48": null,
+                "notes": ""
             },
             "FF1000": {
-                "names": ["FF-1000", "FF_1000"]
+                "names": ["FF-1000", "FF_1000"],
+                "material": "",
+                "d13C": null,
+                "d18O_vpdb": null,
+                "D47": null,
+                "D48": null,
+                "notes": ""
             },
             "FFSP4": {
-                "names": ["FF-SP-4", "FF_SP_4"]
+                "names": ["FF-SP-4", "FF_SP_4"],
+                "material": "",
+                "d13C": null,
+                "d18O_vpdb": null,
+                "D47": null,
+                "D48": null,
+                "notes": ""
             }
         }
 
@@ -460,8 +496,8 @@
             "R18": null,
             "notes": "d34S value as of 161117 from reference_material_S.m, d18O from a calibration run on Lorax April 26, 2023, measured as CO versus vsmow and slap waters in silver capsules, "
         },
-        "Sulf-alpha": {
-            "names": ["Sulf-alpha", "Sulf_alpha"],
+        "Sulf_alpha": {
+            "names": ["Sulf_alpha", "Sulf-alpha"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": -2.86,
@@ -471,8 +507,8 @@
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
-        "Sulf-beta": {
-            "names": ["Sulf-beta", "Sulf_beta"],
+        "Sulf_beta": {
+            "names": ["Sulf_beta", "Sulf-beta"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": -1.46,
@@ -482,8 +518,8 @@
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
-        "Sulf-epsilon": {
-            "names": ["Sulf-epsilon", "Sulf_epsilon"],
+        "Sulf_epsilon": {
+            "names": ["Sulf_epsilon","Sulf-epsilon"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": 3.55,
@@ -493,8 +529,8 @@
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
-        "S-bravo": {
-            "names": ["S-bravo", "S_bravo"],
+        "S_bravo": {
+            "names": ["S_bravo","S-bravo"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": -2.15,
@@ -504,8 +540,8 @@
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
-        "S-charlie": {
-            "names": ["S-charlie", "S_charlie"],
+        "S_charlie": {
+            "names": ["S_charlie", "S-charlie"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": -1.96,
@@ -515,8 +551,8 @@
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
-        "S-delta": {
-            "names": ["S-delta", "S_delta"],
+        "S_delta": {
+            "names": ["S_delta", "S-delta"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": -1.29,
@@ -526,8 +562,8 @@
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
-        "S-echo": {
-            "names": ["S-echo", "S_echo"],
+        "S_echo": {
+            "names": ["S_echo", "S-echo"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": 0.46,
@@ -537,8 +573,8 @@
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
-        "S-foxtrot": {
-            "names": ["S-foxtrot", "S_foxtrot"],
+        "S_foxtrot": {
+            "names": ["S_foxtrot", "S-foxtrot"],
             "material": "Sodium sulfate",
             "fractionO": 0.4506,
             "d17O": 3.89,
@@ -563,8 +599,9 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
-            "d18O": null,
-            "d34S": null,
+            "d17O": 4.2,
+            "d18O": 8.1,
+            "d34S": 11.6,
             "R18": null,
             "notes": ""
         },
@@ -604,7 +641,7 @@
             "fractionO": null,
             "fractionS": 0.22574,
             "d18O": null,
-            "d34S": null,
+            "d34S": 8.3,
             "R18": null,
             "notes": ""
         },
@@ -624,7 +661,7 @@
             "fractionO": null,
             "fractionS": 0.22574,
             "d18O": null,
-            "d34S": null,
+            "d34S": -9.5,
             "R18": null,
             "notes": ""
         },
@@ -657,17 +694,6 @@
           "d15Nacc": 0.43,
           "percentN": 21.2,
           "notes": ""
-        },
-        "[name]": {
-            "names": ["[name]"],
-            "material": "[material]",
-            "fractionO": null,
-            "d17O": null,
-            "d18O": null,
-            "D17O": null,
-            "fractionS": null,
-            "d34S": null,
-            "notes": "[notes]"
         }
 
     },
