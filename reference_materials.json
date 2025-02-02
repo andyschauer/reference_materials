@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2024.12.19",
+        "modification_date": "2025.02.01",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -69,6 +69,9 @@
             },
             "v2024.12.19": {
                 "changes": "added reference gas information for clumped isotope calibration"
+            },
+            "v2025.02.01": {
+                "changes": "updated SodSul-2, -4, -6, -8 sulfates to Savarino lab values"
             }
         },
         "Literature": {
@@ -589,6 +592,7 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
+            "d17O": null,
             "d18O": null,
             "d34S": null,
             "R18": null,
@@ -599,17 +603,20 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
-            "d17O": 4.2,
-            "d18O": 8.1,
+            "d17O": 3.1,
+            "d18O": 6.3,
+            "d33S": 7.5,
             "d34S": 11.6,
+            "d36S": 28.3,
             "R18": null,
-            "notes": ""
+            "notes": "Current values from Savarino Lab Jan 2025; previous IsoLab values d17O: 4.2, d18O: 8.1, d34S: 11.6"
         },
         "SodSul_3": {
             "names": ["SodSul_3", "Na2SO4_3"],
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
+            "d17O": null,
             "d18O": null,
             "d34S": null,
             "R18": null,
@@ -620,16 +627,20 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
-            "d18O": null,
-            "d34S": null,
+            "d17O": 1.7,
+            "d18O": 5.5,
+            "d33S": 2.8,
+            "d34S": 2.6,
+            "d36S": 11.1,
             "R18": null,
-            "notes": ""
+            "notes": "Current values from Savarino Lab Jan 2025; "
         },
         "SodSul_5": {
             "names": ["SodSul_5", "Na2SO4_5"],
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
+            "d17O": null,
             "d18O": null,
             "d34S": null,
             "R18": null,
@@ -640,16 +651,20 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
-            "d18O": null,
-            "d34S": 8.3,
+            "d17O": 5.7,
+            "d18O": 12.5,
+            "d33S": 7.0,
+            "d34S": 11.0,
+            "d36S": 20.4,
             "R18": null,
-            "notes": ""
+            "notes": "Current values from Savarino Lab Jan 2025; previous preliminary d34S value was 8.3"
         },
         "SodSul_7": {
             "names": ["SodSul_7", "Na2SO4_7"],
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
+            "d17O": null,
             "d18O": null,
             "d34S": null,
             "R18": null,
@@ -660,10 +675,13 @@
             "material": "Sodium Sulfate",
             "fractionO": null,
             "fractionS": 0.22574,
-            "d18O": null,
-            "d34S": -9.5,
+            "d17O": 2.8,
+            "d18O": 9.7,
+            "d33S": -2.8,
+            "d34S": -7.0,
+            "d36S": -8.8,
             "R18": null,
-            "notes": ""
+            "notes": "Current values from Savarino Lab Jan 2025; previous preliminary d34S was -9.5"
         },
         "Ag2SO4":{
             "names": ["Ag2SO4"],
