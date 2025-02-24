@@ -2,7 +2,7 @@
     "file_meta_data": {
         "file": "reference_materials.json",
         "author": "aschauer@uw.edu",
-        "modification_date": "2025.02.01",
+        "modification_date": "2025.02.23",
         "ChangeLog": {
             "v0.1": {
                 "changes": "created with only water reference materials"
@@ -72,6 +72,9 @@
             },
             "v2025.02.01": {
                 "changes": "updated SodSul-2, -4, -6, -8 sulfates to Savarino lab values"
+            },
+            "v2025.02.23": {
+                "changes": "added 33S placeholders for most sodium sulfates"
             }
         },
         "Literature": {
@@ -507,6 +510,7 @@
             "d18O": -7.16,
             "D17O": 0.86,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
@@ -518,6 +522,7 @@
             "d18O": -6.78,
             "D17O": 2.07,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
@@ -529,6 +534,7 @@
             "d18O": -6.71,
             "D17O": 7.04,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": 9.1,
             "notes": "Designer sodium sulfate from the Helen Amos era (https://isolab.ess.washington.edu/resources/labnotebook/sulfate-oxygen-standards_2009.php), oxygen isotope values from Moon et al. 2024"
         },
@@ -540,6 +546,7 @@
             "d18O": -4.83,
             "D17O": 0.36,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
@@ -551,6 +558,7 @@
             "d18O": -5.48,
             "D17O": 0.89,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
@@ -562,6 +570,7 @@
             "d18O": -7.39,
             "D17O": 2.55,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
@@ -573,6 +582,7 @@
             "d18O": -5.44,
             "D17O": 3.29,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
@@ -584,6 +594,7 @@
             "d18O": -5.89,
             "D17O": 6.95,
             "fractionS": 0.22574,
+            "d33S": null,
             "d34S": null,
             "notes": "Designer sodium sulfate from the Alli Moon era, oxygen isotope values from Moon et al. 2024"
         },
@@ -594,6 +605,7 @@
             "fractionS": 0.22574,
             "d17O": null,
             "d18O": null,
+            "d33S": null,
             "d34S": null,
             "R18": null,
             "notes": ""
@@ -618,6 +630,7 @@
             "fractionS": 0.22574,
             "d17O": null,
             "d18O": null,
+            "d33S": null,
             "d34S": null,
             "R18": null,
             "notes": ""
@@ -642,6 +655,7 @@
             "fractionS": 0.22574,
             "d17O": null,
             "d18O": null,
+            "d33S": null,
             "d34S": null,
             "R18": null,
             "notes": ""
@@ -666,6 +680,7 @@
             "fractionS": 0.22574,
             "d17O": null,
             "d18O": null,
+            "d33S": null,
             "d34S": null,
             "R18": null,
             "notes": ""
